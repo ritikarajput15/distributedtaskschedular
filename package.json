@@ -1,0 +1,32 @@
+{
+  "name": "distributed-task-schedular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "cross-env NODE_ENV=development PORT=8080 AUTH_ONE=oaQweBpieyPbiYdqzcl DB_ONE=abc123 DB_TWO=ritika DB_HOST=0.0.0.0 DB_PORT=27017 DB_THREE=centralserver USER_ONE=admin USER_TWO=admin LOGGING=true WORKER_NODE_URL=http://localhost:3000/executepriorityTask nodemon src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "base64url": "^3.0.1",
+    "body-parser": "^1.19.0",
+    "core-js": "^3.6.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "moment-timezone": "^0.5.28",
+    "mongodb": "^6.0.10",
+    "mongoose": "^6.11.1",
+    "node-cron": "^2.0.3",
+    "validator": "^13.11.0",
+    "winston-daily-rotate-file": "^4.4.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.2"
+  }
+}
